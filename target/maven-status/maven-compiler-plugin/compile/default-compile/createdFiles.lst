@@ -1,0 +1,6 @@
+services\booking\BookingService.class
+services\menu\Menu.class
+services\booking\Booking.class
+services\cards\Visa.class
+services\menu\Order.class
+services\booking\Table.class

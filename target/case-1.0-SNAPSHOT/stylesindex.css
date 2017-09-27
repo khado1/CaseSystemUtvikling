@@ -1,0 +1,16 @@
+table{
+    background-color: white;
+    padding: 20px;
+    margin: 25px;
+    width: 600px;
+}
+
+#box{
+    background-color: darkgray;
+    padding: 10px;
+    width: 650px;
+}
+
+.ddl{
+    width: 125px;
+}
