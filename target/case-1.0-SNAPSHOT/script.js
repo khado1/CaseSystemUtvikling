@@ -61,9 +61,6 @@ $(document).ready(function() {
         $("#ddlDrinks").html(htmlDrinks);
     })
 
-    $("#t1").click(function () {
-        document.location.href = "rest/restaurant/live";
-    });
     $("#order").click(function () {
         $.ajax({
             url: 'rest/restaurant/booking',

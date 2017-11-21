@@ -9,10 +9,19 @@
 </head>
 <body>
     <div id="box">
-        <p>Choose date and time: <input id="dateTime" type="datetime-local"></p>
+
         <table>
             <tr>
-            <td>How many persons: </td>
+                <td>
+                     Velg dato og tidspunkt:
+                </td>
+                <td>
+                    <input id="dateTime" type="datetime-local">
+                </td>
+            </tr>
+
+            <tr>
+            <td>Hvor mange personer: </td>
                 <td>
                     <select id="persons">
                         <option>1</option>
@@ -31,7 +40,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Choose appetizer:</td>
+                <td>Velg forretten:</td>
                 <td>
                     <select id = "ddlAppetizers" class="ddl"></select>
                 </td>
@@ -39,40 +48,40 @@
             </tr>
 
             <tr>
-                <td>Choose main course:</td>
+                <td>Velg hovedretten:</td>
                 <td>
                     <select id = "ddlMains" class="ddl"></select>
                 </td>
             </tr>
             <tr>
-                <td>Choose dessert:</td>
+                <td>Velg desseren:</td>
                 <td>
                     <select id = "ddlDesserts" class="ddl"></select>
                 </td>
             </tr>
             <tr>
-                <td>Choose drinks:</td>
+                <td>Velg drikken:</td>
                 <td>
                     <select id = "ddlDrinks" class="ddl"></select>
                 </td>
             </tr>
             <tr><td>&nbsp</td></tr>
             <tr>
-                <td>First name:</td>
+                <td>Fornavn:</td>
                 <td><input type="text" id="forNavn"></td>
                 <td> </td>
-                <td>Last name:</td>
+                <td>Etternavn:</td>
                 <td><input type="text" id="etterNavn"></td>
             </tr>
             <tr>
-                <td>Card number: </td>
+                <td>Kortnummer: </td>
                 <td><input type="text" id="cNumber"></td>
                 <td></td>
                 <td>CVC: </td>
                 <td><input type="text" id="cvc"></td>
             </tr>
             <tr>
-                <td>Expiration date: &nbsp&nbsp</td>
+                <td>Utløpsdato: &nbsp&nbsp</td>
                 <td>
                     <select id="edMnd">
                         <option>01</option>
@@ -101,11 +110,10 @@
                     </select>
                 </td>
             </tr>
-            <tr><td>Confirm</td>
+            <tr><td>Bekreft</td>
                 <td><input id="confirmPayment" type="checkbox"></td></tr>
         </table>
-        <p><input type="button" value="Order" id="order"></p>
+        <p><input type="button" value="Bestill" id="order"></p>
     </div>
-    <input type="button" value="View live panel" id="t1">
 </body>
 </html>

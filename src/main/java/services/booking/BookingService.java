@@ -77,4 +77,43 @@ public class BookingService {
         for(int i = 0; i < tables.length; i++) t[i] = tables[i];
         return t;
     }
+
+    @GET
+    @Produces(MediaType.TEXT_HTML)
+    @Path("/live")
+    public String getLivePanel(){
+        String html = "<table><thead><tr><th>Table</th><th>Time</th><th>Order</th></tr>";
+        for(int i = 0; i < tables.length; i++){
+            for(int j = 0; j < tables[i].getBookings().size(); j++){
+                html += "<tr>";
+                html += "<td>" + i + "</td>";
+                html += "<td>" + tables[i].getBookings().get(j).getBookingStart() + "</td>";
+                html += "<td>";
+                for(int k = 0; k < tables[i].getBookings().get(j).getOrder().getForRetter().length; k++){
+                    if(tables[i].getBookings().get(j).getOrder().getForRetter()[k] > 0){
+                        html += tables[i].getBookings().get(j).getOrder().getForRetter()[k] + " x " + Menu.forRetter[k] + ", ";
+                    }
+                }
+                for(int k = 0; k < tables[i].getBookings().get(j).getOrder().getHovedRetter().length; k++){
+                    if(tables[i].getBookings().get(j).getOrder().getHovedRetter()[k] > 0){
+                        html += tables[i].getBookings().get(j).getOrder().getHovedRetter()[k] + " x " + Menu.hovedRetter[k] + ", ";
+                    }
+                }
+                for(int k = 0; k < tables[i].getBookings().get(j).getOrder().getDesserts().length; k++){
+                    if(tables[i].getBookings().get(j).getOrder().getDesserts()[k] > 0){
+                        html += tables[i].getBookings().get(j).getOrder().getDesserts()[k] + " x " + Menu.desserts[k] + ", ";
+                    }
+                }
+                for(int k = 0; k < tables[i].getBookings().get(j).getOrder().getMineralVann().length; k++){
+                    if(tables[i].getBookings().get(j).getOrder().getMineralVann()[k] > 0){
+                        html += tables[i].getBookings().get(j).getOrder().getMineralVann()[k] + " x " + Menu.mineralVann[k]+ ", " ;
+                    }
+                }
+                html += "</td>";
+                html += "</tr>";
+            }
+        }
+        html += "</thead></table>";
+        return html;
+    }
 }
